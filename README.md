@@ -9,7 +9,7 @@ npm install -g generator-tribble
 ```
 Then generate your new project:
 ```bash
-yo bennetts
+yo tribble
 ```
 ## Getting To Know Yeoman
  * Yeoman has a heart of gold.
@@ -17,7 +17,7 @@ yo bennetts
  * Yeoman can be too opinionated at times but is easily convinced not to be.
  * Feel free to [learn more about Yeoman](http://yeoman.io/).
 ## License
-MIT © [Richard Cooper]()
+MIT ï¿½ [Richard Cooper]()
 [npm-image]: https://badge.fury.io/js/generator-tribble.svg
 [npm-url]: https://npmjs.org/package/generator-tribble
 [travis-image]: https://travis-ci.org/frozenskys/generator-tribble.svg?branch=master

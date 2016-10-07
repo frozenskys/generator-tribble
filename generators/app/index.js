@@ -14,7 +14,7 @@ module.exports = yeoman.Base.extend({
     var prompts = [{
       type: 'confirm',
       name: 'cake',
-      message: 'Would you like to use a cake build file?',
+      message: 'Would you like to use cake build?',
       default: true
     },{
       type: 'confirm',
