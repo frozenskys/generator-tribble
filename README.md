@@ -1,4 +1,5 @@
 # generator-tribble [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+[![Coverage Status](https://coveralls.io/repos/github/frozenskys/generator-tribble/badge.svg?branch=master)](https://coveralls.io/github/frozenskys/generator-tribble?branch=master)
 > Example Yeoman generator using composition
 
 ## Installation
@@ -16,7 +17,8 @@ yo tribble
  * Yeoman is a person with feelings and opinions, but is very easy to work with.
  * Yeoman can be too opinionated at times but is easily convinced not to be.
  * Feel free to [learn more about Yeoman](http://yeoman.io/).
-## License
+
+## License 
 MIT © [Richard Cooper]()
 [npm-image]: https://badge.fury.io/js/generator-tribble.svg
 [npm-url]: https://npmjs.org/package/generator-tribble
