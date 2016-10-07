@@ -2,19 +2,25 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
+var mkdirp = require('mkdirp');
 
 module.exports = yeoman.Base.extend({
   prompting: function () {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the luminous ' + chalk.red('generator-tribble') + ' generator!'
+      'Welcome to the luminous ' + chalk.red('Tribble') + ' generator!'
     ));
 
     var prompts = [{
       type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
+      name: 'cake',
+      message: 'Would you like to use a cake build file?',
       default: true
+    },{
+      type: 'confirm',
+      name: 'license',
+      message: 'Would you like to create a license file?',
+      default: false
     }];
 
     return this.prompt(prompts).then(function (props) {
@@ -22,15 +28,28 @@ module.exports = yeoman.Base.extend({
       this.props = props;
     }.bind(this));
   },
-
-  writing: function () {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
-    );
+  default: function () {
+    if (this.props.license) {
+      this.composeWith('license', {
+      }, {
+        local: require.resolve('generator-license')
+      });
+    }
+    if (this.props.cake) {
+      this.composeWith('cake', {options: {
+            installBootstrapper: true,
+            installConfigFile: false,
+            downloadFromRemote: false
+        }
+      }, {
+        local: require.resolve('generator-cake')
+      });
+    }
   },
 
-  install: function () {
-    this.installDependencies();
-  }
+  writing: function () {
+    mkdirp.sync('./src');
+    mkdirp.sync('./lib');
+  },
+
 });
