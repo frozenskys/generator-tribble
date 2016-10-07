@@ -1,5 +1,4 @@
-# generator-tribble [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-[![Coverage Status](https://coveralls.io/repos/github/frozenskys/generator-tribble/badge.svg?branch=master)](https://coveralls.io/github/frozenskys/generator-tribble?branch=master)
+# generator-tribble [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url][![Coverage Status][coveralls-image]][coveralls-url]
 > Example Yeoman generator using composition
 
 ## Installation
@@ -26,3 +25,5 @@ MIT © [Richard Cooper]()
 [travis-url]: https://travis-ci.org/frozenskys/generator-tribble
 [daviddm-image]: https://david-dm.org/frozenskys/generator-tribble.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/frozenskys/generator-tribble
+[coveralls-image]: https://coveralls.io/repos/github/frozenskys/generator-tribble/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/frozenskys/generator-tribble?branch=master
