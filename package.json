@@ -20,7 +20,7 @@
     "yeoman-generator": "^0.23.0",
     "chalk": "^1.0.0",
     "yosay": "^1.0.0",
-    "generator-cake": "^0.2.2",
+    "generator-cake": "frozenskys/generator-cake",
     "generator-license": "4.0.0"
   },
   "devDependencies": {
@@ -51,7 +51,6 @@
   },
   "repository": "https://github.com/frozenskys/generator-tribble.git",
   "scripts": {
-    "prepublish": "gulp prepublish",
     "test": "gulp"
   },
   "license": "MIT"
