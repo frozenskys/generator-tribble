@@ -1,6 +1,6 @@
 {
   "name": "generator-tribble",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Example Yeoman generator using composition",
   "homepage": "https://github.com/frozenskys/generator-tribble",
   "author": {
@@ -20,7 +20,7 @@
     "yeoman-generator": "^0.23.0",
     "chalk": "^1.0.0",
     "yosay": "^1.0.0",
-    "generator-cake": "^0.3.1",
+    "generator-cake": "^0.2.2",
     "generator-license": "4.0.0"
   },
   "devDependencies": {
@@ -44,7 +44,7 @@
       "mocha": true
     }
   },
-  "repository": "https://github.com/frozenskys/generator-tribble.git",
+  "repository": "frozenskys/generator-tribble",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
