@@ -17,7 +17,7 @@ yo tribble
  * Yeoman can be too opinionated at times but is easily convinced not to be.
  * Feel free to [learn more about Yeoman](http://yeoman.io/).
 ## License
-MIT � [Richard Cooper]()
+MIT © [Richard Cooper]()
 [npm-image]: https://badge.fury.io/js/generator-tribble.svg
 [npm-url]: https://npmjs.org/package/generator-tribble
 [travis-image]: https://travis-ci.org/frozenskys/generator-tribble.svg?branch=master

@@ -12,7 +12,7 @@ describe('generator-tribble:app', function () {
 
   it('creates files', function () {
     assert.file([
-      'dummyfile.txt'
+      'build.cake'
     ]);
   });
 });

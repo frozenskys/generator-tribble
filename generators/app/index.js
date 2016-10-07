@@ -16,7 +16,7 @@ module.exports = yeoman.Base.extend({
       name: 'cake',
       message: 'Would you like to use cake build?',
       default: true
-    },{
+    }, {
       type: 'confirm',
       name: 'license',
       message: 'Would you like to create a license file?',
@@ -37,10 +37,10 @@ module.exports = yeoman.Base.extend({
     }
     if (this.props.cake) {
       this.composeWith('cake', {options: {
-            installBootstrapper: true,
-            installConfigFile: false,
-            downloadFromRemote: false
-        }
+        installBootstrapper: true,
+        installConfigFile: false,
+        downloadFromRemote: false
+      }
       }, {
         local: require.resolve('generator-cake')
       });
@@ -50,6 +50,6 @@ module.exports = yeoman.Base.extend({
   writing: function () {
     mkdirp.sync('./src');
     mkdirp.sync('./lib');
-  },
+  }
 
 });
