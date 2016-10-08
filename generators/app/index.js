@@ -28,6 +28,7 @@ module.exports = yeoman.Base.extend({
       this.props = props;
     }.bind(this));
   },
+
   default: function () {
     if (this.props.license) {
       this.composeWith('license', {
@@ -50,6 +51,11 @@ module.exports = yeoman.Base.extend({
   writing: function () {
     mkdirp.sync('./src');
     mkdirp.sync('./lib');
+    this.composeWith('git-init', {
+      options: {commit: 'Initial Commit of scaffolding'}
+    }, {
+      local: require.resolve('generator-git-init')
+    });
   }
 
 });
