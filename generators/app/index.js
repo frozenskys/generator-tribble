@@ -51,6 +51,10 @@ module.exports = yeoman.Base.extend({
   writing: function () {
     mkdirp.sync('./src');
     mkdirp.sync('./lib');
+    this.fs.copy(
+      this.templatePath('templates/**'),
+      this.destinationRoot()
+    );
     this.composeWith('git-init', {
       options: {commit: 'Initial Commit of scaffolding'}
     }, {
