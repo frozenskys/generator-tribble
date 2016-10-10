@@ -1,7 +1,15 @@
 language: node_js
 node_js:
-  - v6
-  - v5
+- v6
+- v5
 before_script:
-  - 'git config --global user.email "richard.cooper@bennetts.co.uk"'
-  - 'git config --global user.name "Richard Cooper"'
+- git config --global user.email "richard.cooper@bennetts.co.uk"
+- git config --global user.name "Richard Cooper"
+deploy:
+  provider: npm
+  email: richard@frozenskys.co.uk
+  api_key:
+    secure: 2okHWNHbHapUlUViZnp3gaiLihUq0A8oq4LffpFy/bCv07tWrAak2OoAUhZdZqkW2tK72KpRUb0icEoRFaEyxez52O/fIzGmV0RCliUkWPyFuhwIgfKLd6q/mk7NvjD94m4W9lyY+Wei3qHy2SJOdTSAtaN+eQsesrXMssUOJwEoQ3qIzn3BJtthJx3SS2bIntUdgf95MynpyiSAdDqZDQgvCDZUBalTO7OnE+js6f+kkzUD3nBFkxpvyR3lVkAFiBbRVwnZ5JXffBI9npMSHI80eirAoBahJ99P1ybxu0UWoG69tMCHyMayEjwMiz2NagX/+J0q3TVyNq336Bk4nNmVjqVULMEilRxuX46deFzmJRdCOd98QmCp0267UTFv5WahxmdiNqIyK60JMf7B8SNNIhAlof0PyoEd0nymcuyJvWzE3xnKCXhdtQIjbH5cxHiauBhkHFm/dYFtvvbCQ7hPIO+NzvP8YcIn4ffud391ix4D4dsdvg6lXbwbp+54npOzELmaajWBzF+s1srGvmMOmLI8rLHql69FyoyPs9vccLAgmCLEpA9k0gZ0XPq8KloEoHcFF69jMZ98FZ/Iux1RNEPVJnzpFor8YvGmXeGWZG+Xm9I9wirdOL6vTby3xFqs+kuTjv2O1sJ4GAIZb9EIoaB8uydT+0VRykBjyGc=
+  on:
+    tags: true
+    repo: frozenskys/generator-tribble
