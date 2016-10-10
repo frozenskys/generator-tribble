@@ -1,6 +1,6 @@
 {
   "name": "generator-tribble",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Example Yeoman generator using composition",
   "homepage": "https://github.com/frozenskys/generator-tribble",
   "author": {
