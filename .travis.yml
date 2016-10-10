@@ -3,7 +3,7 @@ node_js:
 - v6
 - v5
 before_script:
-- git config --global user.email "richard.cooper@bennetts.co.uk"
+- git config --global user.email "richard@frozenskys.co.uk"
 - git config --global user.name "Richard Cooper"
 deploy:
   provider: npm
