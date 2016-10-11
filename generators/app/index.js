@@ -14,6 +14,11 @@ module.exports = yeoman.Base.extend({
 
     var prompts = [{
       type: 'confirm',
+      name: 'selectGit',
+      message: 'Would you like to use git?',
+      default: true
+    }, {
+      type: 'confirm',
       name: 'selectCake',
       message: 'Would you like to use cake build?',
       default: true
@@ -41,7 +46,8 @@ module.exports = yeoman.Base.extend({
       this.composeWith('cake', {options: {
         installBootstrapper: true,
         installConfigFile: false,
-        downloadFromRemote: false
+        downloadFromRemote: false,
+        fileName: 'build.cake'
       }
       }, {
         local: require.resolve('generator-cake')
@@ -50,20 +56,30 @@ module.exports = yeoman.Base.extend({
   },
 
   writing: function () {
+    this.log('Generating folders');
     mkdirp.sync('./src');
     mkdirp.sync('./lib');
-    this.fs.copy(this.templatePath('.gitignore'), this.destinationPath('.gitignore'));
     if (this.props.selectCake) {
-      this.fs.copy(this.templatePath('build.cmd'), this.destinationPath('build.cmd'));
+      this.composeWith('cakeplus', {
+      }, {
+        local: require.resolve('../cakeplus'),
+        link: 'strong'
+      });
     }
-    this.composeWith('git-init', {
-      options: {commit: 'Initial Commit of scaffolding'}
-    }, {
-      local: require.resolve('generator-git-init')
-    });
+    if (this.props.selectGit) {
+      this.log('Generating git repository');
+      this.fs.copy(this.templatePath('.gitignore'), this.destinationPath('.gitignore'));
+      this.composeWith('git-init', {
+        options: {commit: 'Initial Commit of scaffolding'}
+      }, {
+        local: require.resolve('generator-git-init')
+      });
+    }
   },
 
   end: function () {
-    nodeChildProcess.exec('git tag 0.0.1');
+    if (this.props.selectGit) {
+      nodeChildProcess.exec('git tag 0.0.1');
+    }
   }
 });

@@ -1,0 +1,46 @@
+#tool "GitVersion.CommandLine"
+
+///////////////////////////////////////////////////////////////////////////////
+// ARGUMENTS
+///////////////////////////////////////////////////////////////////////////////
+
+var target = Argument("target", "Default");
+var configuration = Argument("configuration", "Release");
+var artifacts = MakeAbsolute(Directory(Argument("artifactPath", "./artifacts")));
+
+GitVersion versionInfo = null;
+
+///////////////////////////////////////////////////////////////////////////////
+// SETUP / TEARDOWN
+///////////////////////////////////////////////////////////////////////////////
+
+Setup(ctx =>
+{
+	// Executed BEFORE the first task.
+	Information("Running tasks...");
+});
+
+Teardown(ctx =>
+{
+	// Executed AFTER the last task.
+	Information("Finished running tasks.");
+});
+
+///////////////////////////////////////////////////////////////////////////////
+// TASKS
+///////////////////////////////////////////////////////////////////////////////
+
+Task("Clean")
+    .Does(() =>
+{
+    CleanDirectory(artifacts);
+});
+
+Task("Default")
+    .IsDependentOn("Clean")
+    .Does(() => 
+{
+	Information("Hello Cake!");
+});
+
+RunTarget(target);
