@@ -30,8 +30,8 @@ yo tribble
    - Add common arguments and variables
    - Create initial git tag (e.g. 0.0.1)
    - Use gitVersion with tags
-  - Option to connect local repo to remote repo already created in TFS
-  - Option to create remote repo in TFS
+ - Option to connect local repo to remote repo already created in TFS
+ - Option to create remote repo in TFS
 
 ## License 
 MIT © [Richard Cooper]()
