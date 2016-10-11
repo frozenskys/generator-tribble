@@ -13,12 +13,12 @@ module.exports = yeoman.Base.extend({
 
     var prompts = [{
       type: 'confirm',
-      name: 'cake',
+      name: 'selectCake',
       message: 'Would you like to use cake build?',
       default: true
     }, {
       type: 'confirm',
-      name: 'license',
+      name: 'selectLicense',
       message: 'Would you like to create a license file?',
       default: false
     }];
@@ -30,13 +30,13 @@ module.exports = yeoman.Base.extend({
   },
 
   default: function () {
-    if (this.props.license) {
+    if (this.props.selectLicense) {
       this.composeWith('license', {
       }, {
         local: require.resolve('generator-license')
       });
     }
-    if (this.props.cake) {
+    if (this.props.selectCake) {
       this.composeWith('cake', {options: {
         installBootstrapper: true,
         installConfigFile: false,
@@ -52,7 +52,7 @@ module.exports = yeoman.Base.extend({
     mkdirp.sync('./src');
     mkdirp.sync('./lib');
     this.fs.copy(this.templatePath('.gitignore'), this.destinationPath('.gitignore'));
-    if (this.props.cake) {
+    if (this.props.selectCake) {
       this.fs.copy(this.templatePath('build.cmd'), this.destinationPath('build.cmd'));
     }
     this.composeWith('git-init', {
