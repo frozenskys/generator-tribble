@@ -3,6 +3,7 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
 var mkdirp = require('mkdirp');
+var nodeChildProcess = require('child_process');
 
 module.exports = yeoman.Base.extend({
   prompting: function () {
@@ -60,6 +61,9 @@ module.exports = yeoman.Base.extend({
     }, {
       local: require.resolve('generator-git-init')
     });
-  }
+  },
 
+  end: function () {
+    nodeChildProcess.exec('git tag 0.0.1');
+  }
 });
