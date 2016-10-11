@@ -7,7 +7,6 @@ var nodeChildProcess = require('child_process');
 
 module.exports = yeoman.Base.extend({
   prompting: function () {
-    // Have Yeoman greet the user.
     this.log(yosay(
       'Welcome to the luminous ' + chalk.red('Tribble') + ' generator!'
     ));
@@ -30,18 +29,14 @@ module.exports = yeoman.Base.extend({
     }];
 
     return this.prompt(prompts).then(function (props) {
-      // To access props later use this.props.someAnswer;
       this.props = props;
     }.bind(this));
   },
 
-  default: function () {
-    if (this.props.selectLicense) {
-      this.composeWith('license', {
-      }, {
-        local: require.resolve('generator-license')
-      });
-    }
+  writing: function () {
+    this.log('Generating folders');
+    mkdirp.sync('./src');
+    mkdirp.sync('./lib');
     if (this.props.selectCake) {
       this.composeWith('cake', {options: {
         installBootstrapper: true,
@@ -52,18 +47,16 @@ module.exports = yeoman.Base.extend({
       }, {
         local: require.resolve('generator-cake')
       });
-    }
-  },
-
-  writing: function () {
-    this.log('Generating folders');
-    mkdirp.sync('./src');
-    mkdirp.sync('./lib');
-    if (this.props.selectCake) {
       this.composeWith('cakeplus', {
       }, {
         local: require.resolve('../cakeplus'),
         link: 'strong'
+      });
+    }
+    if (this.props.selectLicense) {
+      this.composeWith('license', {
+      }, {
+        local: require.resolve('generator-license')
       });
     }
     if (this.props.selectGit) {
@@ -79,7 +72,11 @@ module.exports = yeoman.Base.extend({
 
   end: function () {
     if (this.props.selectGit) {
+      this.log('Generating git tag');
       nodeChildProcess.exec('git tag 0.0.1');
     }
+    this.log(yosay(
+      'Tribbles generated Captain!'
+    ));
   }
 });
