@@ -68,7 +68,7 @@ describe('generator-tribble:app', function () {
       return helpers.run(path.join(__dirname, '../generators/app'))
       .withPrompts({
         selectLicense: true,
-        license: 'mit',
+        license: 'MIT',
         name: 'Rick',
         email: 'foo@example.com',
         website: 'http://example.com'
@@ -80,10 +80,9 @@ describe('generator-tribble:app', function () {
         '.gitignore'
       ]);
     });
-    it('it does include a license file', function() {
-      assert.file([
-        'LICENSE'
-      ]);
+    it('creates LICENSE file', function () {
+      assert.fileContent('LICENSE', 'MIT');
+      assert.fileContent('LICENSE', 'Rick <foo@example.com> (http://example.com)');
     });
     it('it does not include a license file', function() {
       assert.noFile([
