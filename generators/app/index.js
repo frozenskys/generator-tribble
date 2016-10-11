@@ -52,7 +52,9 @@ module.exports = yeoman.Base.extend({
     mkdirp.sync('./src');
     mkdirp.sync('./lib');
     this.fs.copy(this.templatePath('.gitignore'), this.destinationPath('.gitignore'));
-    this.fs.copy(this.templatePath('build.cmd'), this.destinationPath('build.cmd'));
+    if (this.props.cake) {
+      this.fs.copy(this.templatePath('build.cmd'), this.destinationPath('build.cmd'));
+    }
     this.composeWith('git-init', {
       options: {commit: 'Initial Commit of scaffolding'}
     }, {
