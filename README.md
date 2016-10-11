@@ -15,16 +15,16 @@ yo tribble
 ```
 
 ## What Tribble does
-This generator creates: 
+### This generator creates: 
 
- - Optional cake build files (uses generator-cake >=0.2.3 - currently pulling directly from github repo)
- - Optional license file (uses generator license)
- - Creates empty src and lib folders
- - Creates a base .gitignore file
- - Initialises an empty git repository and an initial commit (uses generator-git-init)
+ - Optional cake build files (uses `generator-cake>=0.2.3` - currently pulling directly from github repo)
+ - Optional license file (uses `generator-license`)
+ - Creates empty `src` and `lib` folders
+ - Creates a base `.gitignore` file
+ - Initialises an empty git repository and an initial commit (uses `generator-git-init`)
 
 
- Still in development:
+### Still in development:
 
  - Enhance default build.cake file
    - Add common arguments and variables
