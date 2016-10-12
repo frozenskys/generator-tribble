@@ -3,7 +3,7 @@ var path = require('path');
 var assert = require('yeoman-assert');
 var helpers = require('yeoman-test');
 
-describe('generator-tribble:app', function () {
+describe('generator-tribble:cakeplus', function () {
   describe('when run with defaults', function() {
     before(function() {
       return helpers.run(path.join(__dirname, '../generators/cakeplus'))
