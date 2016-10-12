@@ -5,16 +5,18 @@
   "homepage": "https://github.com/frozenskys/generator-tribble",
   "author": {
     "name": "Richard Cooper",
-    "email": "Richard.Cooper@bennetts.co.uk",
-    "url": ""
+    "email": "richard.cooper@bennetts.co.uk",
+    "url": "http://fightingrabbits.com"
   },
   "files": [
     "generators"
   ],
-  "main": "generators/index.js",
+  "main": "generators/app/index.js",
   "keywords": [
-    "cake license generator yeoman",
-    "yeoman-generator"
+    "yeoman-generator",
+    "cake",
+    "license",
+    "build"
   ],
   "dependencies": {
     "chalk": "^1.0.0",
@@ -51,9 +53,11 @@
       "indent": "warn"
     }
   },
-  "repository": "https://github.com/frozenskys/generator-tribble.git",
+  "repository": "frozenskys/generator-tribble",
   "scripts": {
+    "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "config" : {}
 }
