@@ -1,6 +1,6 @@
 {
   "name": "generator-tribble",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Example Yeoman generator using composition",
   "homepage": "https://github.com/frozenskys/generator-tribble",
   "author": {
@@ -59,5 +59,5 @@
     "test": "gulp"
   },
   "license": "MIT",
-  "config" : {}
+  "config": {}
 }
