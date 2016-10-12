@@ -61,7 +61,7 @@ module.exports = yeoman.Base.extend({
     }
     if (this.props.selectGit) {
       this.log('Generating git repository');
-      this.fs.copy(this.templatePath('.gitignore'), this.destinationPath('.gitignore'));
+      this.fs.copy(this.templatePath('_gitignore'), this.destinationPath('.gitignore'));
       this.composeWith('git-init', {
         options: {commit: 'Initial Commit of scaffolding'}
       }, {
