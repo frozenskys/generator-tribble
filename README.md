@@ -1,9 +1,9 @@
 # generator-tribble 
-[![NPM version][https://badge.fury.io/js/generator-tribble.svg]][https://npmjs.org/package/generator-tribble]
-[![Build Status][https://travis-ci.org/frozenskys/generator-tribble.svg?branch=master]][https://travis-ci.org/frozenskys/generator-tribble] 
-[![Dependency Status][https://david-dm.org/frozenskys/generator-tribble.svg?theme=shields.io]][https://david-dm.org/frozenskys/generator-tribble] 
-[![Coverage Status][https://coveralls.io/repos/github/frozenskys/generator-tribble/badge.svg?branch=master]][https://coveralls.io/github/frozenskys/generator-tribble?branch=master]
-> Example Yeoman generator using composition
+[![NPM version](https://badge.fury.io/js/generator-tribble.svg)](https://npmjs.org/package/generator-tribble)
+[![Build Status](https://travis-ci.org/frozenskys/generator-tribble.svg?branch=master)](https://travis-ci.org/frozenskys/generator-tribble)
+[![Dependency Status](https://david-dm.org/frozenskys/generator-tribble.svg?theme=shields.io)](https://david-dm.org/frozenskys/generator-tribble) 
+[![Coverage Status](https://coveralls.io/repos/github/frozenskys/generator-tribble/badge.svg?branch=master)](https://coveralls.io/github/frozenskys/generator-tribble?branch=master)
+> Scaffolds an application with an enhanced version of cake build.
 
 ## Installation
 First, install [Yeoman](http://yeoman.io) and generator-tribble using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
