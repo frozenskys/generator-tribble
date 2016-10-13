@@ -1,5 +1,9 @@
-# generator-tribble [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage Status][coveralls-image]][coveralls-url]
-> Example Yeoman generator using composition
+# generator-tribble 
+[![NPM version](https://badge.fury.io/js/generator-tribble.svg)](https://npmjs.org/package/generator-tribble)
+[![Build Status](https://travis-ci.org/frozenskys/generator-tribble.svg?branch=master)](https://travis-ci.org/frozenskys/generator-tribble)
+[![Dependency Status](https://david-dm.org/frozenskys/generator-tribble.svg?theme=shields.io)](https://david-dm.org/frozenskys/generator-tribble) 
+[![Coverage Status](https://coveralls.io/repos/github/frozenskys/generator-tribble/badge.svg?branch=master)](https://coveralls.io/github/frozenskys/generator-tribble?branch=master)
+> Scaffolds an application with an enhanced version of cake build.
 
 ## Installation
 First, install [Yeoman](http://yeoman.io) and generator-tribble using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
@@ -13,6 +17,15 @@ mkdir mynewproject
 cd mynewproject
 yo tribble
 ```
+
+You can now use the following commands
+ - `cake` - run the default target (same as ./build.ps1)
+ - `cake build` - run the "Build" Task (same as ./build.ps1 -target build)
+ - `cake test` - run the "Test" Task (same as ./build.ps1 -target test)
+ - `cake package` - run the "Package" task (you get the picture by now...)
+ - `cake version major/minor/patch` - run the "Version" task which increments the GitVersion tag major/minor/patch value similar to `npm version patch` e.g.
+
+![Running 'cake version patch'](art/patch.png)
 
 ## What Tribble does
 ### This generator creates: 
@@ -36,11 +49,3 @@ yo tribble
 
 ## License 
 MIT © [Richard Cooper]()
-[npm-image]: https://badge.fury.io/js/generator-tribble.svg
-[npm-url]: https://npmjs.org/package/generator-tribble
-[travis-image]: https://travis-ci.org/frozenskys/generator-tribble.svg?branch=master
-[travis-url]: https://travis-ci.org/frozenskys/generator-tribble
-[daviddm-image]: https://david-dm.org/frozenskys/generator-tribble.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/frozenskys/generator-tribble
-[coveralls-image]: https://coveralls.io/repos/github/frozenskys/generator-tribble/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/frozenskys/generator-tribble?branch=master

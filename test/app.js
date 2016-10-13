@@ -20,10 +20,10 @@ describe('generator-tribble:app', function () {
         'build.sh'
       ]);
     });
-    it('includes .gitignore and build.cmd files', function() {
+    it('includes .gitignore and cake.cmd files', function() {
       assert.file([
         '.gitignore',
-        'build.cmd'
+        'cake.cmd'
       ]);
     });
     it('updates the build.cake file', function () {
@@ -57,7 +57,7 @@ describe('generator-tribble:app', function () {
         'build.ps1',
         'build.sh',
         'cake.config',
-        'build.cmd'
+        'cake.cmd'
       ]);
     });
     it('and it does not include a license file', function() {
@@ -97,7 +97,7 @@ describe('generator-tribble:app', function () {
         'build.cake',
         'build.ps1',
         'build.sh',
-        'build.cmd'
+        'cake.cmd'
       ]);
     });
   });
@@ -117,7 +117,7 @@ describe('generator-tribble:app', function () {
         'build.cake',
         'build.ps1',
         'build.sh',
-        'build.cmd'
+        'cake.cmd'
       ]);
     });
     it('and it does not include a license file', function() {
