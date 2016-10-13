@@ -41,8 +41,8 @@ Task("Version")
 	{
 		var semVersion = "";
 		int major = 0;
-		int minor = 0;
-		int patch = 1;
+		int minor = 1;
+		int patch = 0;
 		GitVersion assertedVersions = GitVersion(new GitVersionSettings
 		{
 			OutputType = GitVersionOutput.Json,
