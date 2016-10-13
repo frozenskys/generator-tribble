@@ -6,6 +6,7 @@ node_js:
 before_script:
 - git config --global user.email "richard@frozenskys.co.uk"
 - git config --global user.name "Richard Cooper"
+- npm install -g npm
 deploy:
   provider: npm
   email: richard@frozenskys.co.uk
