@@ -2,6 +2,7 @@ language: node_js
 node_js:
 - v6
 - v5
+- v4
 before_script:
 - git config --global user.email "richard@frozenskys.co.uk"
 - git config --global user.name "Richard Cooper"
