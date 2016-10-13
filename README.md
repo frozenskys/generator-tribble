@@ -46,9 +46,9 @@ You can now use the following commands from the command line.
 
 ### Still in development:
 
- - Option to connect local repo to remote repo already created in TFS
- - Option to create remote repo in TFS
- - Create a .vscode folder adding the cake commands as tasks.
+ - Option to connect local repo to remote repo already created in TFS, github, etc.
+ - Option to create remote repo in TFS, github, etc.
+ - Optinally create a .vscode folder adding the cake commands as tasks.
 
 ## License 
 MIT © [Richard Cooper]()
