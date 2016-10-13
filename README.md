@@ -11,6 +11,8 @@ First, install [Yeoman](http://yeoman.io) and generator-tribble using [npm](http
 npm install -g yo
 npm install -g generator-tribble
 ```
+
+## <a name="usage"></a>Usage
 Then generate your new project:
 ```bash
 mkdir mynewproject
@@ -18,7 +20,7 @@ cd mynewproject
 yo tribble
 ```
 
-You can now use the following commands
+You can now use the following commands from the command line.
  - `cake` - run the default target (same as ./build.ps1)
  - `cake build` - run the "Build" Task (same as ./build.ps1 -target build)
  - `cake test` - run the "Test" Task (same as ./build.ps1 -target test)
@@ -31,21 +33,22 @@ You can now use the following commands
 ### This generator creates: 
 
  - Creates empty `src` and `lib` folders
- - Optional cake build files (uses `generator-cake>=0.2.3` - currently pulling directly from github repo)
+ - Optional cake build files (uses `generator-cake>=0.2.3`)
    - Add common arguments and variables to build.cake
+   - Adds some default tasks to build.cake
+   - Adds a cake.cmd file (see [usage](#usage))
  - Optional license file (uses `generator-license`)
  - Optional Initialise git repository (uses `generator-git-init`)
    - Creates a base `.gitignore` file
    - Performs an initial commit (uses `generator-git-init`)
-   - Create initial git tag (`0.0.1`)
+   - Create initial git tag (`0.1.0`)
 
 
 ### Still in development:
 
- - Enhance default build.cake file
-   - Use gitVersion with tags
  - Option to connect local repo to remote repo already created in TFS
  - Option to create remote repo in TFS
+ - Create a .vscode folder adding the cake commands as tasks.
 
 ## License 
 MIT © [Richard Cooper]()
