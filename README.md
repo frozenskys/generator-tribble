@@ -15,10 +15,11 @@ yo tribble
 ```
 
 You can now use the following commands
- - `cake build` - run the "build" Task 
- - `cake test` - run the "Test" Task 
- - `cake package` - run the "Package" task 
- - `cake version major/minor/patch` - run the "Version" task which by default increments the GitVersion tag major/minor/patch value e.g.
+ - `cake` - run the default target (same as ./build.ps1)
+ - `cake build` - run the "build" Task (same as ./build.ps1 -target build)
+ - `cake test` - run the "Test" Task (same as ./build.ps1 -target build)
+ - `cake package` - run the "Package" task (you get the picture by now...)
+ - `cake version major/minor/patch` - run the "Version" task which increments the GitVersion tag major/minor/patch value similar to `npm version patch` e.g.
 
 ![Running 'cake version patch'](art/patch.png)
 
