@@ -55,9 +55,9 @@ Task("Version")
 			case "patch":
 				patch += 1; break;
 			case "minor":
-				minor += 1; break;
+				minor += 1; patch = 0; break;
 			case "major":
-				major += 1;	break;			
+				major += 1;	minor = 0; patch = 0; break;			
 		};
 		semVersion = string.Format("{0}.{1}.{2}", major, minor, patch);
 		GitTag(".", semVersion);
