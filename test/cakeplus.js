@@ -11,7 +11,7 @@ describe('generator-tribble:cakeplus', function () {
     });
     it('creates files', function() {
       assert.file([
-        'build.cmd'
+        'cake.cmd'
       ]);
     });
     it('updates the build.cake file', function () {
