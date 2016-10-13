@@ -16,8 +16,8 @@ yo tribble
 
 You can now use the following commands
  - `cake` - run the default target (same as ./build.ps1)
- - `cake build` - run the "build" Task (same as ./build.ps1 -target build)
- - `cake test` - run the "Test" Task (same as ./build.ps1 -target build)
+ - `cake build` - run the "Build" Task (same as ./build.ps1 -target build)
+ - `cake test` - run the "Test" Task (same as ./build.ps1 -target test)
  - `cake package` - run the "Package" task (you get the picture by now...)
  - `cake version major/minor/patch` - run the "Version" task which increments the GitVersion tag major/minor/patch value similar to `npm version patch` e.g.
 
