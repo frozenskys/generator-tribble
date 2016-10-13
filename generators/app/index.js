@@ -73,7 +73,7 @@ module.exports = yeoman.Base.extend({
   end: function () {
     if (this.props.selectGit) {
       this.log('Generating git tag');
-      //semVer recommends starting at 0.1.0
+      // semVer recommends starting at 0.1.0
       nodeChildProcess.exec('git tag 0.1.0');
     }
     this.log(yosay(
