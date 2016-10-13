@@ -23,7 +23,7 @@ GitVersion versionInfo = null;
 Setup(ctx =>
 {
 	// Executed BEFORE the first task.
-	Information(Figlet("Bennetts Cake"));
+	Information(Figlet("Tribble Cake"));
 });
 
 Teardown(ctx =>
