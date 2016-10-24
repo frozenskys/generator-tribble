@@ -17,5 +17,8 @@ describe('generator-tribble:cakeplus', function () {
     it('updates the build.cake file', function () {
       assert.fileContent('build.cake', 'GitVersion');
     });
+    it('updates the build.ps1 file', function () {
+      assert.fileContent('build.ps1', '# Patched by RCooper');
+    });
   });
 });
