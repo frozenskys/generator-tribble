@@ -11,7 +11,7 @@
 
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
-var versionType = Argument("VersionType", "Patch");
+var versionType = Argument("VersionType", "patch");
 var artifacts = MakeAbsolute(Directory(Argument("artifactPath", "./artifacts")));
 
 GitVersion versionInfo = null;
