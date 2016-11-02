@@ -1,6 +1,6 @@
 {
   "name": "generator-tribble",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Scaffolds an application with an enhanced version of cake build.",
   "homepage": "https://github.com/frozenskys/generator-tribble",
   "author": {
