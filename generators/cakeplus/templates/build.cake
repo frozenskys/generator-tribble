@@ -11,7 +11,7 @@
 
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
-var versionType = Argument("VersionType", "Patch");
+var versionType = Argument("VersionType", "patch");
 var artifacts = MakeAbsolute(Directory(Argument("artifactPath", "./artifacts")));
 
 GitVersion versionInfo = null;
@@ -50,7 +50,7 @@ Task("Version")
 		major = assertedVersions.Major;
 		minor = assertedVersions.Minor;
 		patch = assertedVersions.Patch;
-		switch (versionType)
+		switch (versionType.ToLower())
 		{
 			case "patch":
 				patch += 1; break;
